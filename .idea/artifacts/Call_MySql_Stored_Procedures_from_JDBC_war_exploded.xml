@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Call-MySql-Stored-Procedures-from-JDBC:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Call_MySql_Stored_Procedures_from_JDBC_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Call-MySql-Stored-Procedures-from-JDBC/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Call-MySql-Stored-Procedures-from-JDBC" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
