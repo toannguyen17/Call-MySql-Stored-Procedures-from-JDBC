@@ -24,7 +24,7 @@ public class UserServlet extends HttpServlet {
     private IUserDAO userDAO;
 
     public void init() {
-        userDAO = UserStoredDAO.getInstance();
+        userDAO = new UserStoredDAO();
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

@@ -3,6 +3,7 @@ package com.codegym.dao;
 import com.codegym.model.User;
 
 import java.sql.CallableStatement;
+import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -18,6 +19,8 @@ public class UserStoredDAO extends UserDAO {
 			callableStatement.setString(2, user.getEmail());
 			callableStatement.setString(3, user.getCountry());
 
+			System.out.println(callableStatement);
+
 			callableStatement.executeUpdate();
 		} catch (SQLException throwables) {
 			throwables.printStackTrace();
@@ -30,6 +33,7 @@ public class UserStoredDAO extends UserDAO {
 		try {
 			CallableStatement callableStatement = connection.prepareCall(SELECT_USER_BY_ID);
 			callableStatement.setInt(1, id);
+			System.out.println(callableStatement);
 
 			ResultSet rs = callableStatement.executeQuery();
 

@@ -7,8 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDAO implements IUserDAO {
-    private static UserDAO instance;
-
     private String jdbcURL      = "jdbc:mysql://localhost:3306/testjdbc?useSSl=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
     private String jdbcUsername = "root";
     private String jdbcPassword = "";
@@ -35,16 +33,6 @@ public class UserDAO implements IUserDAO {
             e.printStackTrace();
         }
     }
-
-    public static UserDAO getInstance() {
-        if (instance == null){
-            synchronized (UserDAO.class){
-                instance = new UserDAO();
-            }
-        }
-        return instance;
-    }
-
 
     public void insertUser(User user) {
         try {
